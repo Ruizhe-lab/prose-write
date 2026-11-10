@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "unit_id": "synthetic-ratio-explanation",
+  "task": "Repair only the unsupported conclusion in the candidate. Preserve the definition and use the source's proportional comparison.",
+  "authority": "Local editing exercise only. No scientific, publication or external-send authority.",
+  "purpose": "Let the reader distinguish rising output from rising output per labor hour.",
+  "reader_audience": "a general economics reader",
+  "reader_knows": "The definitions in the preceding publication-facing text.",
+  "central_claims": ["A rise in a numerator alone does not determine a ratio's direction."],
+  "accepted_constraints": ["Do not invent observed data or a causal mechanism."],
+  "candidate": "candidate.txt",
+  "preceding_prose": ["preceding.txt"],
+  "source_materials": ["source.txt"],
+  "instruction_materials": ["current-choice.md"],
+  "review_focus": "Check the ratio inference, preserve useful content, and keep editorial instructions out of the reader packet."
+}

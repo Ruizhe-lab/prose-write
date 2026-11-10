@@ -1,0 +1,1 @@
+We compare two production periods. Output is positive in each period, and labor hours are also positive. Both quantities may change between the periods.
