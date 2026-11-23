@@ -8,6 +8,7 @@ Start with [installation and use](INSTALL.md), then read [SKILL.md](SKILL.md). Y
 
 - [SKILL.md](SKILL.md): the entry point, workflow and scientific safeguards.
 - [Writing handbook](references/writing-handbook.md) and [runbook](references/writing-runbook.md): argument design, preparation, independent review and delivery.
+- [The author walk](references/author-walk.md) and [unit roles](references/unit-roles.md): scope by ownership, a plan for each section before its paragraphs, a paragraph card that names each unit's job, a send gate, and a correction loop, with a plain statement of what one blind test did and did not show. `scripts/card_check.py` reports mechanical markers in a draft.
 - [Reference guides](SKILL.md#reference-map): section-specific writing, claim fidelity, plain language and learning.
 - [Optional Python helper](references/helper-guide.md) and invented examples: prepare review packets and track declared changes. The helper does not judge prose or run reviewers.
 

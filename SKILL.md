@@ -25,6 +25,8 @@ At the affected section, paragraph and sentence scales, each changed unit needs 
 3. **Prepare the connected unit.** Choose the statement's job and exact scope before selecting prerequisites. Draft necessary orientation, statement and explanation together. A good preamble may add nothing. Preserve useful compact mathematics, teaching calculations and sound accepted prose. Under an authorized reconstruction, reassess retained passages as well as new ones.
 4. **Review the actual candidate.** A source/editorial reviewer receives the design, evidence and joined prose. A fresh reader receives only publication-facing prose and necessary preceding context. Follow [review protocol](references/review-protocol.md). The lead reconciles findings and owns readiness. The first author-facing draft is the reconciled version, not raw worker output.
 5. **Walk and deliver.** Answer substantive author questions before proposing dependent text. Present the connected passage at the agreed cadence. Keep routine application, checks and learning off the walk. Use one canonical writer, retire superseded markup, inspect the actual render and verify the authorized destination. A local artifact is not a remote publication.
+When an author walks the paper with the writers part by part, use [the author walk](references/author-walk.md) for steps 2 to 5: agree the scope by ownership, agree a plan for each section before its paragraphs (the point, and what the reader learns and feels in each part), write a paragraph card that names the unit's [role](references/unit-roles.md), and pass a send gate before anything reaches the author. `scripts/card_check.py` is the mechanical part of that gate; it finds markers and certifies nothing.
+
 6. **Learn and reuse.** On each correction and completed work unit, apply [learning](references/learning.md): diagnose the responsible decision or handoff, repair it and its dependents, update the existing appropriate instruction, and inspect its next relevant use. A written rule alone is not evidence of improvement.
 
 ## Protections that remain in force
@@ -45,6 +47,8 @@ At the affected section, paragraph and sentence scales, each changed unit needs 
 |---|---|
 | Paper, section and paragraph design; worked examples | [Writing handbook](references/writing-handbook.md) |
 | Roles, preparation, review, author walk, delivery | [Writing runbook](references/writing-runbook.md) |
+| Author walks the paper part by part; scope, section plan, paragraph card, send gate, correction loop | [The author walk](references/author-walk.md) |
+| What each kind of unit is for, with invented examples | [Unit roles](references/unit-roles.md) |
 | Introduction, institutional setting, empirical exposition | [Section purposes](references/section-purposes.md) |
 | Model setup | [Model setup](references/model-setup.md) |
 | Results and complete formal units | [Results sections](references/results-sections.md) |
