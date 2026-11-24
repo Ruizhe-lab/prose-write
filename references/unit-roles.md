@@ -1,68 +1,84 @@
 # Unit roles, with invented examples
 
-Every unit of a paper has a job, and the job decides its first sentence. Use this with stage 3 of [the author walk](author-walk.md). The examples are invented for teaching and come from no real paper: an imaginary study of a wholesale market in which a large seller offers loyalty rebates.
+Every unit has one job, and the job decides its first sentence.
+Use this with the card in [the unit file](unit-plan-card-gate.md), "The card". The table of roles is there; this file only illustrates it.
+The examples are invented for teaching. They come from no real paper. They use one imaginary study: outpatient clinics that book more patients than they have slots, and what happens when they start sending appointment reminders.
 
-| Role | Its job | First sentence |
-|---|---|---|
-| Opening of a unit that carries a surprise | the question, the stakes and the route, with the shortest causal link that makes the stakes intelligible; the worked case stays in the body | a question, or the expectation that fails |
-| Opening of a derivation | name what is solved and why | the economic question |
-| Setup | rules once, then notation, in separate paragraphs | the object being defined |
-| The means (solving) | reach the result with the least machinery | what is computed, and for whom |
-| Explanation after a result | make the reader understand; do not restate conditions | the tension, or the plain consequence |
-| The paragraph that carries the point | one concrete case, then the general statement | the answer to the question the previous part ended on |
-| Confirmation or test | the prediction, then what the data show | "The model predicts ..., and the data let us check" |
-| Light edit | keep the author's chain; fix a word or a pointer | unchanged |
+## 1. Opening that carries a surprise
 
-## 1. Opening of a unit that carries a surprise
+The job: give the reader the expectation, the finding that contradicts it, and the route. The mechanism waits for the body.
 
-Flat (announces, then lists):
+Weak:
 
-> We now solve the full model. The rebate lowers the price large buyers pay. The posted price rises. Small buyers pay more. The seller's profit increases.
+> This section studies reminders. Reminders reduce missed appointments. Clinics overbook. Waits rise because attendance exceeds the number of slots when the booking level is unchanged, as a queueing model with two patient types shows.
 
-Built as a rise, each sentence handing over:
+Better:
 
-> Who pays for a loyalty rebate? One would expect the seller to pay: it gives up revenue on every rebated unit. Surprisingly, its revenue does not fall. The rebate lowers what large buyers pay, and their purchases rise. Judged by these buyers, the rebate looks like plain competition. Yet small buyers are harmed, and precisely because of the rebate: a seller that discounts its largest accounts can raise its posted price without losing them. This section solves for the posted price and shows why.
+> A clinic that reminds patients of their appointments should run closer to schedule. Fewer slots go unused, and staff spend less time idle. In the twelve clinics we study, waits grew instead. The rest of the section traces the cause to a booking rule that the clinics left as it was.
 
-What changed: the benchmark logic is stated exactly; the surprise comes in steps; the cause appears in one clause and the worked case is left to the body.
-
-A common wrong turn is to explain the whole mechanism in the opening. An opening raises the question; the body answers it.
+What to notice:
+- The expectation comes with its reason, so the reader holds it before it fails.
+- The finding takes one short sentence.
+- The cause is named and not explained. An opening that explains the whole mechanism leaves the body nothing to do.
 
 ## 2. Opening of a derivation
 
-Before: "The seller's incentive is captured by the following expression." After: "When does a rebate pay? It keeps a large buyer who would otherwise switch, and it costs the seller the discount on every unit that buyer takes. The difference is:" followed by the display and two sentences that read it.
+The job: say what is being solved and why, before any display.
 
-## 3. Explanation after a result
+Weak: "The clinic's objective is given by the following expression."
 
-Restating conditions:
+Better: "We now find the number of bookings that costs a clinic least. An extra booking makes an empty slot less likely and an overfull session more likely, and the clinic weighs one against the other." The display follows, and one sentence reads each of its terms.
 
-> The posted price increases if the share of large buyers exceeds the threshold and decreases otherwise, as the expression shows.
+## 3. Setup
 
-Understanding, in the form case and reason, case and reason, the tension, the resolution:
+The job: state the rules once, in words, then the notation, in a separate paragraph.
 
-> If few buyers are large, the seller has little to protect and leaves its price alone. If many are large, the rebate secures them, and the seller can charge the rest more. It does not raise the price without limit: each increase sends some small buyers to rivals. The posted price settles where the last increase no longer pays.
+> A clinic runs one session a day with a fixed number of slots. Before the session it decides how many patients to book. Each booked patient either attends or misses, independently of the others. Patients who attend are seen in order of arrival. When more attend than there are slots, the session runs over.
+>
+> Let n be the number of slots, b the number of bookings, and m the probability that a booked patient misses.
 
-## 4. The paragraph that carries the point
+What to notice: the first paragraph can be read without a symbol, and it computes nothing. How the clinic chooses b belongs to the results.
 
-Follow one case the reader can picture, then generalize: a small buyer who orders the same quantity before and after the rebate is introduced, at a higher posted price, with no rebate. Then the general statement, and, if an equation carries it, a short formal statement explained after it.
+## 4. The means (solving)
 
-## 5. The means, compressed
+The job: reach the result with the least machinery.
 
-Keep the displays the text reads for the point, and say in one sentence each what they show. Bookkeeping steps, a second definition of a symbol and a list of "objects we derive in turn" are cut. "The seller chooses the posted price that maximizes profit given the rebate; if that price exceeds the cap, it posts the cap" is enough when the cap is not the point.
+State in one sentence the problem the agent solves. Display only the condition the text goes on to read. Send the algebra to the appendix.
 
-## 6. Confirmation or test
+> The clinic adds bookings until the expected cost of one more overfull slot equals the expected saving from one fewer empty slot. Equation (3) states this balance.
 
-Do not force a surprise onto a result the model predicts. "The model predicts that small buyers pay more where large buyers are common, and invoice data let us check" is the right frame; "Remarkably, small buyers pay more" is not.
+The intermediate displays that lead to equation (3) do not appear in the main text.
 
-## 7. Light edit and no change
+## 5. Explanation after a result
 
-Where the author's chain is sound, change a loose word, remove a dash, drop a pointer to a proof that follows directly, and leave the rest. In a section owned by a coauthor, or one the author calls fine, the right answer is often "no change", with one material issue if there is one.
+The job: make the reader understand the result. Restating its conditions does not do that.
 
-## Small defaults
+Restating:
 
-- No recap of notation; define a symbol where it is used.
-- No sentence that only points to a proof of a numbered result. A claim that no numbered result states keeps its reference.
-- Do not say a result holds "by assumption" when the assumption is disclosed where it is made.
-- An explanation can be a reading of the formula, an intuition, a breakdown into channels or a comparison with a benchmark. Do not replace a good one of another kind.
-- Keep the field's standard terms. Plain words replace private jargon, not established vocabulary.
-- Do not tell the reader a point is clear.
-- When shortening a long, fluent paragraph, keep every link and reason clause; do not cut the chain into fragments.
+> The optimal booking level increases in the miss rate and decreases in the cost of waiting, as equation (3) shows.
+
+Explaining:
+
+> A clinic whose patients often miss can book well beyond its slots, because most sessions will still have room. As attendance becomes reliable, each extra booking is more likely to bring a patient for whom no slot is free, and the clinic should book fewer. Reminders move a clinic from the first situation towards the second. Its waits lengthen when nobody revisits the booking level.
+
+## 6. The part that carries the point
+
+The job: one case the reader can picture, then the general statement.
+
+> Take a session with twenty slots and twenty-four bookings. When one patient in six misses, twenty attend on average and the session ends on time. With reminders, one in twelve misses, twenty-two attend, and the last two are seen after the session should have closed. In general, a booking level set for the old miss rate brings more patients than slots once attendance improves.
+
+If an equation carries the point, give it a short formal statement and explain it afterwards.
+
+## 7. Confirmation or test
+
+The job: state the prediction, then what the data show. Do not dress a predicted result as a surprise.
+
+Right frame: "The model predicts longer waits only in clinics that kept their booking level. The appointment records let us check."
+Wrong frame: "Remarkably, waits rose in clinics that kept their booking level."
+
+## 8. Light edit, and no change
+
+The job: leave a sound chain alone.
+
+Replace a loose word ("show up more" becomes "attend more often") or correct a reference that points to the wrong table. Leave the order and the sentences as they are.
+In a coauthor's section, or a part the author calls fine, the answer is often "no change", with one material issue if there is one ([the team file](../HOW_WE_WORK.md), MATERIAL-NOT-WORDING).

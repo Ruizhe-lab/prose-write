@@ -1,5 +1,0 @@
-INVENTED TEACHING SOURCE; no empirical findings.
-
-The only established objects in this exercise are output Y > 0, labor hours H > 0, and the definition of output per labor hour as Y/H. Between two periods, Y/H rises exactly when the proportional increase in Y exceeds the proportional increase in H. No values, causal model or actual direction of labor-hours change are supplied.
-
-The exercise asks for a faithful explanation of this elementary ratio relation, not a new research result or proof-status claim.

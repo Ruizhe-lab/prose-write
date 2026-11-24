@@ -1,25 +1,48 @@
 # prose-write
 
-A public, portable skill for drafting and revising academic prose from reviewed research. It helps a writer choose the argument before the wording, preserve scientific claims, check what a reader actually understands, and deliver a prepared draft.
+A portable writing skill for an author and two writers. The writers may be people or AI assistants.
+It covers paper sections, grants, proposals, letters and emails.
+It puts the argument before the wording, keeps scientific claims intact, checks what a fresh reader understands, and gives the author up to three versions of each part to choose from.
 
-Start with [installation and use](INSTALL.md), then read [SKILL.md](SKILL.md). You can use the files with a compatible agent, a chat assistant that accepts attachments, or a human writing team. No particular model or paid service is required.
+Start with [installation and use](INSTALL.md), then [SKILL.md](SKILL.md).
+No particular model, paid service or platform is required.
 
-## What is included
+## The parts
 
-- [SKILL.md](SKILL.md): the entry point, workflow and scientific safeguards.
-- [Writing handbook](references/writing-handbook.md) and [runbook](references/writing-runbook.md): argument design, preparation, independent review and delivery.
-- [The author walk](references/author-walk.md) and [unit roles](references/unit-roles.md): scope by ownership, a plan for each section before its paragraphs, a paragraph card that names each unit's job, a send gate, and a correction loop, with a plain statement of what one blind test did and did not show. `scripts/card_check.py` reports mechanical markers in a draft.
-- [Reference guides](SKILL.md#reference-map): section-specific writing, claim fidelity, plain language and learning.
-- [Optional Python helper](references/helper-guide.md) and invented examples: prepare review packets and track declared changes. The helper does not judge prose or run reviewers.
+- [SKILL.md](SKILL.md): the entry. It routes by job and by type of text.
+- [HOW_WE_WORK.md](HOW_WE_WORK.md): the team. Who leads, the partner writer, one message per part, approval, delivery, the record.
+- [STANDARDS.md](STANDARDS.md): what good writing is, for all types.
+- [The unit file](references/unit-plan-card-gate.md): the plan of a section, the card for each paragraph, the send check, the fresh reader, what to do on a correction.
+- [The walk](references/author-walk.md): what changes when the author goes through a text part by part.
+- [The runbook](references/writing-runbook.md): a prepared section of several parts.
+- [Unit roles](references/unit-roles.md): one invented example for each kind of paragraph.
+- [Build checks](references/paper-build-checks.md), [claim fidelity](references/theory-claim-fidelity.md), [grant package](references/grant-package.md).
+- `types/`: one sheet per type of text.
+- [Published examples](examples/published.md): short cited quotes from published articles, by function.
+- `templates/`: forms for the plan message, the part message and the project record.
+- `scripts/card_check.py`: reports mechanical markers in a draft. It certifies nothing.
+- [MAINTENANCE.md](MAINTENANCE.md): how a correction enters the skill.
 
-## A starting prompt
+## How an author uses it
 
-> Read this prose-write skill and use it to revise the attached section from the reviewed sources. Recover our current decisions, prepare the complete argument, obtain the required independent source/editorial and fresh-reader reviews, and show me the reconciled draft. Preserve the scientific claims and their verification status. Record lessons from corrections in the project's writing notes and read those notes in later sessions.
+1. Name the text and the section. Say "prepare" if you will read it later.
+2. Agree a one-minute plan: the section's point and the order of its parts.
+3. For each part, pick one of the versions shown, mix them, or correct.
+4. Approve delivery once, and sign off once at the end.
 
-Provide the manuscript and research sources, plus any audience, venue, scope or protected passages that the project has not already recorded. If an independent reviewer is unavailable, state that limitation; self-review does not satisfy independent review.
+The writers do the rest: briefing each other, checking sources, keeping the record, applying approved text.
+A starting request:
 
-## Keep learning between sessions
+> Read the prose-write skill. Revise section 3 of the attached paper with me, part by part. Use a partner writer. Keep the scientific claims and their status.
 
-Use an existing project note for decisions and corrections, and have future sessions read it. Keep reusable writing guidance in one maintained local copy of the skill. The [learning procedure](references/learning.md) explains how to diagnose a correction, repair the work and check the next use. Persistence depends on saving and reloading those records; this package runs no background service.
+## Evidence, stated honestly
 
-This portable edition includes no private manuscripts or published exemplar texts. Its examples are invented. The skill grants no authority to change science, publish or send externally. See [export notes](EXPORT_NOTES.md) for adaptation, attribution and limits.
+- One blind replay on one paper. Nine passages were redrafted with the walk procedure, without sight of the approved text. Model judges found the new drafts closer to the author's approved text in seven of nine. One paper and model judges make this weak evidence.
+- A before-and-after comparison of the procedure itself, on twelve writing jobs. Fresh readers, with no history of the skill, traced the same twelve jobs through the old instructions and through the rebuilt ones. They counted the places where two instructions contradicted each other and the points a writer was left to guess. Contradictions fell from 26 to 3. Points left to guess fell from 83 to 53. Reading per job fell from about 170 KB to about 96 KB.
+- That comparison measures how clear the procedure is. It does not measure the quality of the prose, and no prose was written in it.
+
+Measure your own first-pass acceptance before you rely on any rate.
+
+## Limits
+
+The skill grants no authority to change science, publish or send anything. It contains no private manuscripts. Its teaching examples are invented. From published articles it holds only short cited quotes ([published examples](examples/published.md)). See [EXPORT_NOTES.md](EXPORT_NOTES.md).

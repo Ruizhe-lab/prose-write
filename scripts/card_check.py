@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Mechanical part of the send gate of the author walk (references/author-walk.md, stage 4).
+"""Step 1 of the send check (references/unit-plan-card-gate.md).
+It flags generic markers only. The word lists are a starter set: add your own field's terms.
 
 Reports markers to inspect in a drafted passage. It never certifies writing: exit 0 means the
 measurement ran and found no marker; exit 1 means at least one marker; exit 2 is a usage or input error.
@@ -8,7 +9,7 @@ measurement ran and found no marker; exit 1 means at least one marker; exit 2 is
 
 --rise     the passage is meant to build a surprise: every sentence after the first should open
            with a linking word, and a turn ("Yet"/"But"/"However") should be present.
---actors   e.g. she:buyer,she:seller: if two named actors that share a pronoun
+--actors   e.g. she:nurse,she:patient: if two named actors that share a pronoun
            both occur, each sentence using that pronoun is listed for inspection.
 --before   the paper's current text; reports the length ratio AFTER/BEFORE.
 """
@@ -24,17 +25,19 @@ COUNTING = re.compile(
 )
 ENUM = re.compile(r"(?<![A-Za-z0-9])(?<![Pp]anel )(?<![Pp]anels )\((i|ii|iii|iv|v|a|b|c)\)\s")
 CLEAR = re.compile(
-    r"\b(clearly|obviously|of course|it is clear that|the clear(er|est)? one|needless to say|"
+    r"\b(clearly|obviously|of course|it is clear that|needless to say|"
     r"it is easy to see|as is well known)\b",
     re.I,
 )
+# A short generic starter set of loose figurative phrases. It is not a rule about any field.
+# Add the private labels and loose words your own author has rejected.
 JARGON = re.compile(
-    r"\b(slot|conjectur\w*|inherits?|pins? down|pinned|floored|in miniature|"
-    r"filters? out|shades? its|put(s)? probability|sits (at|in|on|one|below|above))\b",
+    r"\b(at the end of the day|boils? down to|under the hood|low-hanging fruit|"
+    r"moving parts|deep dive|game[- ]changer)\b",
     re.I,
 )
 HEDGE = re.compile(
-    r"\b(by assumption|to first order|arguably|it should be noted|we note that|importantly|"
+    r"\b(arguably|it should be noted|we note that|importantly|"
     r"more importantly|interestingly|notably)\b",
     re.I,
 )
@@ -50,7 +53,6 @@ LINKS = (
     "but",
     "however",
     "surprisingly",
-    "more surprisingly",
     "thus",
     "therefore",
     "hence",
@@ -61,7 +63,6 @@ LINKS = (
     "moreover",
     "nor",
     "instead",
-    "judged",
     "this ",
     "that ",
     "these ",
@@ -90,8 +91,6 @@ LINKS = (
     "whereas",
     "while",
     "to see",
-    "to establish",
-    "one would",
     "who",
     "what",
     "why",
@@ -100,21 +99,14 @@ LINKS = (
     "each",
     "neither",
     "either",
-    "part of",
-    "the more",
-    "the lower",
-    "the higher",
     "and ",
     "or ",
     "we ",
-    "in equilibrium",
-    "in the baseline",
     "at ",
     "here",
     "there",
     "such",
     "another",
-    "a second",
 )
 
 
@@ -180,7 +172,7 @@ def main():
             and (
                 sents[0].rstrip().endswith("?")
                 or re.search(
-                    r"one would expect|is expected|" r"the natural|in a standard",
+                    r"\b(expect\w*|should|usual\w*|standard|natural\w*)\b",
                     sents[0] + (sents[1] if len(sents) > 1 else ""),
                     re.I,
                 )
